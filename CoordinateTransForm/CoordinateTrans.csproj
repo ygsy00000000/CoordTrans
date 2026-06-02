@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4D860E3-95F4-4B7E-A1F2-B1F710519A3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZJUGIS.CoordinateTrans</RootNamespace>
+    <AssemblyName>ZJUGIS.CoordinateTrans</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\CoordinateTrans\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.ADF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Carto.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.ConversionTools.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.DataSourcesFile.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.DataSourcesGDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.DataSourcesRaster.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Geodatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Geoprocessing.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.Geoprocessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\ArcGIS\ESRI.ArcGIS.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\bin\Extension\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZJUGIS.Framework.CommonMethod">
+      <HintPath>..\bin\Framework\ZJUGIS.Framework.CommonMethod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZJUGIS.Framework.CommonModule">
+      <HintPath>..\bin\Framework\ZJUGIS.Framework.CommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZJUGIS.Framework.Dev">
+      <HintPath>..\bin\Framework\ZJUGIS.Framework.Dev.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZJUGIS.GIS.CommonMethod">
+      <HintPath>..\bin\GISCommon\ZJUGIS.GIS.CommonMethod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZJUGIS.GISModule.CommonMethod">
+      <HintPath>..\bin\GISModuleCommon\ZJUGIS.GISModule.CommonMethod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ZJUGIS.GISModule.CommonModule">
+      <HintPath>..\bin\GISModuleCommon\ZJUGIS.GISModule.CommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClipFramedMapClass\ClipFramedMapComm.cs" />
+    <Compile Include="CommonClass\AnnoComm.cs" />
+    <Compile Include="CommonClass\ConstantValueComm.cs" />
+    <Compile Include="CommonClass\CorrectionComm.cs" />
+    <Compile Include="CommonClass\EncryptAndDncryptComm.cs" />
+    <Compile Include="CommonClass\GISComm.cs" />
+    <Compile Include="CommonClass\NewTransForm.cs" />
+    <Compile Include="CommonClass\ObjectDefinitionComm.cs" />
+    <Compile Include="CommonClass\Raster\RasrerImageComm.cs" />
+    <Compile Include="CommonClass\Raster\RasterTFWCls.cs" />
+    <Compile Include="CommonClass\SquareNetComm.cs" />
+    <Compile Include="CommonClass\TFComm.cs" />
+    <Compile Include="CommonClass\TransFormMethod.cs" />
+    <Compile Include="CommonClass\Vector\TransCADMathComm.cs" />
+    <Compile Include="CommonClass\Vector\TransMDBMathComm.cs" />
+    <Compile Include="CommonClass\Vector\TransShpMathComm.cs" />
+    <Compile Include="CommonClass\Vector\TransVCTMathComm.cs" />
+    <Compile Include="TransFormClass\TFileCorrection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransFormClass\TCorrection.cs" />
+    <Compile Include="TransFormClass\TCoordinate2D_4Params.cs" />
+    <Compile Include="TransFormClass\GaussTrans.cs" />
+    <Compile Include="TransFormClass\TCoordinate.cs" />
+    <Compile Include="TransFormClass\ChangeZone.cs" />
+    <Compile Include="TransFormClass\TCoordinate3D_7Params.cs" />
+    <Compile Include="TransFormClass\TFramedCorrection.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
